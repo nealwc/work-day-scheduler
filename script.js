@@ -10,3 +10,9 @@ var updateTime = function() {
 
 setInterval(updateTime, 1000);
 
+$("#eightAM").on("click", function() {
+var eightAMAppointment = $("#eightAMApp").val();
+console.log(eightAMAppointment);
+
+
+});

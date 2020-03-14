@@ -1,14 +1,12 @@
+// get date from moment.js and update the html; can't find a better way to have the date update without running the function every second
 var currentDate = moment().format('MMMM Do YYYY');
-var currentTime = moment().format("LT");
-
 $("#current-date").text("Current Date: " + currentDate);
 
-function updateTime(){
-    var newYork = currentTime;
+// get time from moment.js and update the html every second to keep accurate time
+var updateTime = function() {
+    var currentTime = moment().format("LTS");
     $("#current-time").text("Current Time: " + currentTime);
 };                                                                  
 
-updateTime();
-setInterval(function(){
-   updateTime();
-},60000);
+setInterval(updateTime, 1000);
+

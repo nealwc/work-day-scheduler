@@ -10,13 +10,35 @@ var updateTime = function () {
 
 setInterval(updateTime, 1000);
 
+// change style of inputs dependent on time
+
+function hourStyle() {
+    var time = parseInt(moment().format('LT')); // converts the current time into whole integer of the hour
+    var hour = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5];
+    var hourSpelled = ["eightAM", "nineAM", "tenAM", "elevenAM", "twelvePM", "onePM", "twoPM", "threePM", "fourPM", "fivePM"];
+
+    for (i = 0; i < hour.length; i++) {
+        $("#" + hourSpelled[i] + "App").addClass("bg-secondary text-white"); // changes backgroud color to grey during loop
+        if (time === hour[i]) {
+            $("#" + hourSpelled[i] + "App").addClass("bg-success text-white"); // changes current hour background color to green
+            return; // ends loop so future hours' background isn't changed
+        }
+    }
+}
+
+$(".hour").on("click", function () {
+    var test = $(this).val();
+    console.log(test);
+
+});
+
 // grabs appointment data from html
 $("#eightAM").on("click", function () {
     var eightData = $("#eightAMApp").val();
     console.log(eightData);
 });
 
-$("#nineAM").on("click", function () {
+$(".hour").on("click", function () {
     var nineData = $("#nineAMApp").val();
     console.log(nineData);
 });
@@ -60,3 +82,5 @@ $("#fivePM").on("click", function () {
     var fiveData = $("#fivePMApp").val();
     console.log(fiveData);
 });
+
+hourStyle()

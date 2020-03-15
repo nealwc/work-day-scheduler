@@ -12,35 +12,23 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1 text-center">Work Day Scheduler</span>
-    </nav> -->
-    <!-- <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Work Day Scheduler</h1>
-          <p class="lead" id="current-date"></p>
-          <p class="lead" id="current-time"></p>
-        </div>
-      </div> -->
     <div class="container">
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron">
             <div class="container">
                 <h1 class="display-4">Work Day Scheduler</h1>
+                <hr class="my-4">
                 <p class="lead" id="current-date"></p>
                 <p class="lead" id="current-time"></p>
             </div>
         </div>
-        <div class="row" id="current-date">
-        </div>
-        <div class="row" id="current-time"></div>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3" value="8">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">8:00 am</span>
+                <span class="input-group-text" id="inputGroup-sizing-default"> 8:00 am</span>
             </div>
             <input type="text" class="form-control" placeholder="Event Details" aria-label="Recipient's username"
                 aria-describedby="basic-addon2" id="eightAMApp">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="eightAM">Add Appointment</button>
+                <button class="btn btn-outline-secondary hour" type="button" id="eightAM">Add Appointment</button>
             </div>
         </div>
         <div class="input-group mb-3">
@@ -50,7 +38,7 @@
             <input type="text" class="form-control" placeholder="Event Details" aria-label="Recipient's username"
                 aria-describedby="basic-addon2" id="nineAMApp">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="nineAM">Add Appointment</button>
+                <button class="btn btn-outline-secondary hour" type="button" id="nineAM">Add Appointment</button>
             </div>
         </div>
         <div class="input-group mb-3">
